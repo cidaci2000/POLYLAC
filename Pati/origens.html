@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - POLYLAC | Filamentos PLA Sustentáveis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #94f198;
+            --primary-dark: #1b5e20;
+            --secondary: #ffc107;
+            --light: #f9f9f9;
+            --dark: #333;
+            --gray: #777;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #d8a9df;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: #c687ce;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 80px;
+        }
+        
+        .logo img {
+            height: 100px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1620343804949-7b1e8d5d9e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #ffca28;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* About Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 1rem auto 0;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .text-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+        
+        .text-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Process Section */
+        .process-section {
+            background-color: var(--light);
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 250px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .process-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .process-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .process-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        
+        /* Advantages Section */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .advantage-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .advantage-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .advantage-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.9)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #eee;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            color: white;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bbb;
+            margin-bottom: 0.8rem;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero {
+                height: 350px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="poly1.png" alt="" srcset=""></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produto.html">Produtos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transformando o Futuro com Bioplásticos</h1>
+            <p>A POLYLAC está liderando a revolução em materiais sustentáveis para impressão 3D</p>
+            <a href="#sobre" class="btn">Conheça Nossa História</a>
+        </div>
+    </section>
+    
+    <!-- Sobre o PLA -->
+    <section class="section" id="sobre">
+        <div class="section-title">
+            <h2>O Filamento PLA Sustentável</h2>
+            <p>Conheça o material que está revolucionando a impressão 3D</p>
+        </div>
+        <div class="content">
+            <div class="text-content">
+                <h3>O Bioplástico do Futuro</h3>
+                <p>O filamento PLA é composto de ácido poliláctico, um polímero termoplástico feito a partir de recursos renováveis, como milho, mandioca e cana-de-açúcar.</p>
+                <p>Ele é conhecido por ser biodegradável, compostável e reciclável, tornando-se uma opção sustentável para a impressão 3D.</p>
+                <p>Nossa missão na POLYLAC é transformar seus projetos e por que ele é uma escolha ecológica e eficiente.</p>
+            </div>
+            <div class="image-content">
+                <img src="5.png" alt="Filamento PLA">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Processo de Fabricação -->
+    <section class="section process-section">
+        <div class="section-title">
+            <h2>Como é Produzido o PLA?</h2>
+            <p>Conheça o processo sustentável de fabricação dos nossos pellets</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h4>Extração do Amido</h4>
+                <p>Extração do amido de fontes renováveis como milho, cana-de-açúcar ou batata</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h4>Fermentação</h4>
+                <p>Fermentação por microorganismos para produzir ácido lático</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <h4>Purificação</h4>
+                <p>Purificação do ácido lático para remover impurezas</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h4>Polimerização</h4>
+                <p>Processo de polimerização para formar moléculas maiores de PLA</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="process-icon">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <h4>Formação de Pellets</h4>
+                <p>Extrusão e corte em pellets para uso industrial</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Biodegradabilidade -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Sustentabilidade Comprovada</h2>
+            <p>O PLA é realmente biodegradável?</p>
+        </div>
+        <div class="content">
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4e37e5f1af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="PLA biodegradável">
+            </div>
+            <div class="text-content">
+                <h3>Decomposição Sustentável</h3>
+                <p>O tempo necessário para que o filamento PLA se degrade na terra pode variar significativamente, dependendo das condições ambientais específicas.</p>
+                <p>Em condições ideais de compostagem industrial, onde há temperatura controlada e condições otimizadas para decomposição, o PLA pode se biodegradar em aproximadamente 3 a 6 meses.</p>
+                <p>Na POLYLAC, nos comprometemos com um processo de fabricação projetado para ser o mais eficiente possível, minimizando o impacto ambiental e aproveitando matérias-primas renováveis.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vantagens -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Vantagens do Filamento PLA</h2>
+            <p>Por que escolher os produtos POLYLAC?</p>
+        </div>
+        
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-print"></i>
+                </div>
+                <h4>Fácil de Imprimir</h4>
+                <p>Pode ser usado em impressoras abertas ou fechadas, com ou sem mesa aquecida</p>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h4>Boa Aderência</h4>
+                <p>Baixíssima contração e ótima adesão entre camadas</p>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h4>Elevada Dureza</h4>
+                <p>Superfície com elevada dureza, ideal para peças que sofrem desgaste</p>
+            </div>
+            
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h4>Qualidade Visual</h4>
+                <p>Impressões com brilho e detalhes nítidos</p>
+            </div>
+        </div>
+        
+        <div class="content" style="margin-top: 3rem; text-align: center;">
+            <p>Se você possui uma impressora aberta, o PLA é a escolha ideal. Além de não exigir mesa aquecida, ele é adequado para peças grandes e que não sofrerão acabamentos posteriores, devido à sua excelente qualidade superficial e brilho.</p>
+            <p>Além disso, nossos materiais podem ser impressos em maiores velocidades e possuem menor probabilidade de deformação.</p>
+        </div>
+    </section>
+    
+    <!-- Valores da Empresa -->
+    <section class="section values-section">
+        <div class="section-title">
+            <h2>Nossos Valores</h2>
+            <p>O que nos move na POLYLAC</p>
+        </div>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h4>Sustentabilidade</h4>
+                <p>Compromisso com materiais renováveis e processos ecoeficientes</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h4>Inovação</h4>
+                <p>Pesquisa contínua para melhorar nossos produtos e processos</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>Qualidade</h4>
+                <p>Padrões rigorosos para garantir o melhor desempenho</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Comunidade</h4>
+                <p>Suporte e parceria com a comunidade de impressão 3D</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Pronto para Impressões Sustentáveis?</h2>
+        <p>Junte-se a milhares de profissionais e entusiastas que já descobriram as vantagens do PLA da POLYLAC</p>
+        <a href="#" class="btn">Explorar Produtos</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">POLY<span>LAC</span></div>
+                <p>Fornecendo soluções sustentáveis para impressão 3D com tecnologia de ponta e respeito ao meio ambiente.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <a href="#">Home</a>
+                <a href="#">Produtos</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Produtos</h3>
+                <a href="#">Filamento PLA</a>
+                <a href="#">Filamento PETG</a>
+                <a href="#">Filamento ABS</a>
+                <a href="#">Pellets</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Tecnológica, 1234</p>
+                <p><i class="fas fa-phone"></i> (11) 5555-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@polylac.com.br</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 POLYLAC - Todos os direitos reservados | Impressões Sustentáveis para um Futuro Melhor</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+        <nav>
+            <a href="#" class="logo"><img src="poly1.png" alt="Logo" srcset=""></a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="origens.html">Origens</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="notification" id="notification">Produto adicionado ao carrinho!</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Filamentos e Materiais para Impressão 3D</h1>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+        
+        <!-- Primeira Fila -->
+        <div class="row">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>Filamento </h3>
+                    <img src="2.jpg" alt="Filamento PLA">
+                    <p class="description">Filamento PLA 1kg</p>
+                    <div class="price">R$ 94,90</div>
+                    <button class="buy-button" data-id="1" data-name="Filamento PLA" data-description="Filamento PLA 1kg" data-price="94.90" data-image="https://images.unsplash.com/photo-1620343804949-7b1e8d5d9e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>Filamento </h3>
+                    <img src="1.jpg" alt="Filamento PLA">
+                    <p class="description">Filamento PLA 1kg</p>
+                    <div class="price">R$ 94,90</div>
+                    <button class="buy-button" data-id="2" data-name="Filamento PLA" data-description="Filamento PLA 1kg" data-price="94.90" data-image="https://images.unsplash.com/photo-1581092335397-9fa406941d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>Filamento </h3>
+                    <img src="10.jpg" alt="Filamento PLA">
+                    <p class="description">Filamento PLA 1kg</p>
+                    <div class="price">R$ 94,90</div>
+                    <button class="buy-button" data-id="3" data-name="Filamento PLA" data-description="Filamento PLA 1kg" data-price="94.90" data-image="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segunda Fila -->
+        <div class="row">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>PELLET</h3>
+                    <img src="4.png" alt="Pellet">
+                    <p class="description">Pellet 1kg</p>
+                    <div class="price">R$ 79,90</div>
+                    <button class="buy-button" data-id="4" data-name="PELLET" data-description="Pellet 1kg" data-price="79.90" data-image="https://images.unsplash.com/photo-1581092918056-0c4e37e5f1af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>PELLET</h3>
+                    <img src="5.png" alt="Pellet">
+                    <p class="description">Pellet 1kg</p>
+                    <div class="price">R$ 79,90</div>
+                    <button class="buy-button" data-id="5" data-name="PELLET" data-description="Pellet 1kg" data-price="79.90" data-image="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>PELLET</h3>
+                    <img src="8.png" alt="Pellet">
+                    <p class="description">Pellet 1kg</p>
+                    <div class="price">R$ 79,90</div>
+                    <button class="buy-button" data-id="6" data-name="PELLET" data-description="Pellet 1kg" data-price="79.90" data-image="https://images.unsplash.com/photo-1581092918056-0c4e37e5f1af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Carrinho de Compras -->
+    <div class="cart-container" id="cartContainer">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-glasses"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Itens do carrinho serão adicionados aqui -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <p>Seu carrinho está vazio</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM
+            const cartIcon = document.getElementById('cartIcon');
+            const cartCount = document.getElementById('cartCount');
+            const cartContainer = document.getElementById('cartContainer');
+            const closeCart = document.getElementById('closeCart');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            const overlay = document.getElementById('overlay');
+            const notification = document.getElementById('notification');
+            const buyButtons = document.querySelectorAll('.buy-button');
+            
+            // Estado do carrinho
+            let cart = [];
+            
+            // Funções do carrinho
+            function updateCartCount() {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+            
+            function addToCart(product) {
+                const existingItem = cart.find(item => item.id === product.id);
+                
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        description: product.description,
+                        price: product.price,
+                        image: product.image,
+                        quantity: 1
+                    });
+                }
+                
+                updateCartCount();
+                updateCartDisplay();
+                showNotification();
+            }
+            
+            function updateCartDisplay() {
+                cartItems.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    cartItems.innerHTML = `
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                            <p>Seu carrinho está vazio</p>
+                        </div>
+                    `;
+                    cartTotal.textContent = 'R$ 0,00';
+                    return;
+                }
+                
+                let total = 0;
+                
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+                    
+                    const cartItemElement = document.createElement('div');
+                    cartItemElement.classList.add('cart-item');
+                    cartItemElement.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-info">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-description">${item.description}</div>
+                            <div class="cart-item-price">R$ ${item.price.toFixed(2).replace('.', ',')}</div>
+                            <div class="cart-item-actions">
+                                <button class="quantity-btn decrease" data-id="${item.id}">-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn increase" data-id="${item.id}">+</button>
+                                <button class="remove-btn" data-id="${item.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    
+                    cartItems.appendChild(cartItemElement);
+                });
+                
+                cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+                
+                // Adicionar event listeners aos botões dentro do carrinho
+                document.querySelectorAll('.decrease').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        updateQuantity(id, -1);
+                    });
+                });
+                
+                document.querySelectorAll('.increase').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        updateQuantity(id, 1);
+                    });
+                });
+                
+                document.querySelectorAll('.remove-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        removeFromCart(id);
+                    });
+                });
+            }
+            
+            function updateQuantity(id, change) {
+                const item = cart.find(item => item.id === id);
+                
+                if (item) {
+                    item.quantity += change;
+                    
+                    if (item.quantity <= 0) {
+                        cart = cart.filter(item => item.id !== id);
+                    }
+                    
+                    updateCartCount();
+                    updateCartDisplay();
+                }
+            }
+            
+            function removeFromCart(id) {
+                cart = cart.filter(item => item.id !== id);
+                updateCartCount();
+                updateCartDisplay();
+            }
+            
+            function showNotification() {
+                notification.classList.add('active');
+                setTimeout(() => {
+                    notification.classList.remove('active');
+                }, 2000);
+            }
+            
+            // Event Listeners
+            cartIcon.addEventListener('click', function() {
+                cartContainer.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeCart.addEventListener('click', function() {
+                cartContainer.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                cartContainer.classList.remove('active');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = {
+                        id: this.getAttribute('data-id'),
+                        name: this.getAttribute('data-name'),
+                        description: this.getAttribute('data-description'),
+                        price: parseFloat(this.getAttribute('data-price')),
+                        image: this.getAttribute('data-image')
+                    };
+                    
+                    addToCart(product);
+                });
+            });
+            
+            checkoutBtn.addEventListener('click', function() {
+                if (cart.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+                
+                alert('Compra finalizada com sucesso! Obrigado pela preferência.');
+                cart = [];
+                updateCartCount();
+                updateCartDisplay();
+                cartContainer.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>

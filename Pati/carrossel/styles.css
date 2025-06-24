@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #deb5ee;
+    padding: 20px;
+}
+
+.carrossel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carrossel-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #faf8f8;
+}
+
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carrossel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-card {
+    min-width: calc(33.333% - 20px);
+    margin: 0 10px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carrossel-card:hover {
+    transform: translateY(-5px);
+}
+
+.carrossel-card img {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.carrossel-card h3 {
+    padding: 15px 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.carrossel-card p {
+    padding: 10px 15px 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carrossel-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .carrossel-card {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .carrossel-card {
+        min-width: 100%;
+    }
+}
+
